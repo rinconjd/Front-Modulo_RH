@@ -7,7 +7,7 @@
 
 # 🧩 Front - Módulo RH (Retail App)
 
-Este módulo representa la interfaz frontend del sistema de Recursos Humanos del ecosistema Retail, desarrollado en Angular. Permite a los usuarios autenticados realizar operaciones como la gestión de empleados, transacciones, conciliaciones de pagos, y pedidos por fecha o identificador.
+Este módulo representa la interfaz frontend del sistema de Recursos Humanos del ecosistema Retail, desarrollado en Angular. Permite al administrador autenticado realizar operaciones de gestión de empleados. Los demás empleados autentacados pueden visualizar los clientes, transacciones, generar la conciliación de pagos, y ver los pedidos por fecha o identificador.
 
 ## 💻 Tecnologías utilizadas
 
@@ -25,7 +25,7 @@ Este módulo representa la interfaz frontend del sistema de Recursos Humanos del
 
 * Node.js 18+
 * Angular CLI
-* Un backend funcional disponible (como el del proyecto .NET Modulo\_RH)
+* Un backend funcional disponible (como el del proyecto .NET Back-Modulo\_RH)
 
 ---
 
@@ -56,7 +56,7 @@ private apiUrl = 'http://10.43.96.39:5000/api';
 
 ## 🔐 Autenticación con JWT
 
-El sistema incluye inicio de sesión para roles `Admin`, `Ordenes` e `Inventario`, donde cada uno tiene accesos distintos.
+El sistema incluye inicio de sesión para roles `Admin`, `Empleado` e `Inventario`, donde cada uno tiene accesos distintos.
 
 * El token se almacena en `localStorage`
 * Se envía en el header `Authorization` como `Bearer <token>`
