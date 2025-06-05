@@ -18,6 +18,7 @@ Este módulo representa la interfaz frontend del sistema de Recursos Humanos del
 * Angular HTTPClient
 * Bootstrap + CSS custom
 * JWT Auth para protección de rutas
+* Visual Studio
 
 ---
 
@@ -135,7 +136,7 @@ http://localhost:4200
 
 ## 🌐 Enlace al backend relacionado
 
-> Puedes emparejar este frontend con el backend [Modulo\_RH](https://github.com/usuario/proyecto-rh) hecho en .NET 7.
+> Puedes emparejar este frontend con el backend [Back-Modulo\_RH](https://github.com/rinconjd/Back-Modulo_RH) hecho en .NET 9.0.2
 
 ---
 
