@@ -1,0 +1,31 @@
+<div class="editar-wrapper">
+  <!-- Botón de volver arriba derecha -->
+  <button class="volver-btn" (click)="volver()">Volver</button>
+
+  <div class="form-container">
+    <h2 style="text-align: center; margin-bottom: 20px;">Agregar Empleado</h2>
+
+    <form (ngSubmit)="agregarEmpleado()">
+      <label>Nombre:</label>
+      <input type="text" [(ngModel)]="empleado.nombre" name="nombre" required />
+
+      <label>Cedula:</label>
+      <input type="text" [(ngModel)]="empleado.cedula" name="cedula" required />
+
+      <label>Rol:</label>
+      <select [(ngModel)]="empleado.rol" name="rol" required>
+        <option value="Inventario">Inventario</option>
+        <option value="Empleado">Empleado</option>
+        <option value="Administrador">Administrador</option>
+      </select>
+
+      <label>Usuario (login):</label>
+        <input type="text" [(ngModel)]="empleado.username" name="username" required />
+
+        <label>Contraseña:</label>
+        <input type="password" [(ngModel)]="empleado.password" name="password" required />
+
+      <button type="submit">Agregar Empleado</button>
+    </form>
+  </div>
+</div>

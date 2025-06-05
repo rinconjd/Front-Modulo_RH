@@ -1,0 +1,65 @@
+<!-- Botón de cerrar sesión -->
+<button class="cerrar-sesion-btn" (click)="cerrarSesion()">Cerrar Sesión</button>
+
+<!-- Botones superiores a la derecha -->
+<div class="botones-superiores">
+  <button class="boton-secundario" (click)="ver_pedidos()">Ver Pedidos</button>
+  <button class="boton-secundario" (click)="irAConciliacion()">Ver Conciliación</button>
+</div>
+
+<!-- Fondo y distribución horizontal -->
+<div class="visualizacion-wrapper">
+  <div class="tablas-contenedor">
+
+    <!-- Clientes -->
+    <div class="tabla">
+      <h3>Clientes</h3>
+      <table *ngIf="clientes.length > 0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of clientes; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.apellido }}</td>
+            <td>{{ c.correo }}</td>
+            <td>{{ c.telefono }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="clientes.length === 0">No hay clientes registrados.</p>
+    </div>
+
+    <!-- Transacciones -->
+    <div class="tabla">
+      <h3>Transacciones</h3>
+      <table *ngIf="transacciones.length > 0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Cédula Cliente</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of transacciones; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ t.clienteCedula }}</td>
+            <td>{{ t.monto }}</td>
+            <td>{{ t.fecha | date: 'short' }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="transacciones.length === 0">No hay transacciones registradas.</p>
+    </div>
+
+  </div>
+</div>

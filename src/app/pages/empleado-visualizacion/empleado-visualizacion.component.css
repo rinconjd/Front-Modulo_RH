@@ -1,0 +1,92 @@
+.visualizacion-wrapper {
+  position: relative;
+  height: 100vh;
+  background: url('https://img.freepik.com/fotos-premium/fondo-degradado-borroso-abstracto-fondo-color-azul-violeta-morado-oscuro-plantilla-banner-telon-fondo-malla-colores-dulces_335640-481.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 20px 20px 20px;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Botón de cerrar sesión */
+.cerrar-sesion-btn {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #7e57c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.cerrar-sesion-btn:hover {
+  background-color: #9575cd;
+}
+
+/* Contenedor de los botones de acción superiores */
+.botones-superiores {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+/* Estilo común para los botones de acción */
+.boton-secundario {
+  padding: 10px 20px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-secundario:hover {
+  background-color: #7986cb;
+}
+
+/* Contenedor de tablas en horizontal */
+.tablas-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Estilo individual para cada tabla */
+.tabla {
+  flex: 1;
+  min-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}

@@ -1,0 +1,64 @@
+.conciliacion-wrapper {
+  position: relative;
+  height: 100vh;
+  padding: 40px;
+  background: url('https://img.freepik.com/fotos-premium/fondo-degradado-borroso-abstracto-fondo-color-azul-violeta-morado-oscuro-plantilla-banner-telon-fondo-malla-colores-dulces_335640-481.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Botón Volver */
+.volver-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 18px;
+  background-color: #7e57c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.volver-btn:hover {
+  background-color: #9575cd;
+}
+
+/* Botón Actualizar */
+.actualizar-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  background-color: #7e57c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actualizar-btn:hover {
+  background-color: #9575cd;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+pre {
+  white-space: pre-wrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 70vh;
+  overflow-y: auto;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}

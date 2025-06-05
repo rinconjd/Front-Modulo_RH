@@ -1,0 +1,38 @@
+<button class="cerrar-sesion-btn" (click)="cerrarSesion()">Cerrar Sesión</button>
+
+<div class="empleados-container">
+  <div class="top-bar">
+    <h2>Lista de Empleados</h2>
+    <button (click)="agregarEmpleado()">Agregar Empleado</button>
+  </div>
+
+  <table *ngIf="empleados.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Cedula</th>
+        <th>Rol</th>
+        <th>Fecha de Ingreso</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empleados">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.nombre }}</td>
+        <td>{{ emp.cedula }}</td>
+        <td>{{ emp.rol }}</td>
+        <td>{{ emp.fechaIngreso | date: 'shortDate' }}</td>
+        <td>
+          <button (click)="modificarEmpleado(emp.id)">Modificar</button>
+          <button (click)="eliminarEmpleado(emp.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="empleados.length === 0" style="text-align: center; color: white;">
+    Servicio no disponible.
+  </p>
+</div>

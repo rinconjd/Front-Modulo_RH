@@ -1,0 +1,76 @@
+/* Fondo y estilo general */
+:host {
+  display: block;
+  height: 100vh;
+  background: url('https://static.vecteezy.com/system/resources/previews/012/847/539/non_2x/abstract-background-with-gradient-yellow-color-suitable-for-design-needs-display-website-ui-and-others-free-photo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 40px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor principal translúcido */
+.empleados-container {
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 0, 0);
+}
+
+/* Encabezado con botón */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.top-bar h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 175, 2, 0.952);
+  text-align: left;
+  color: rgb(255, 0, 0);
+}
+
+th {
+  background-color: rgba(255, 175, 2, 0.952);
+}
+
+/* Botones */
+button {
+  padding: 8px 14px;
+  margin-right: 6px;
+  border: none;
+  background-color: #ff3300;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ff5e00;
+}
+
+button:last-child {
+  margin-right: 0;
+}

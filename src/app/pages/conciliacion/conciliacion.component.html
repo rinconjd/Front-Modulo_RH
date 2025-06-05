@@ -1,0 +1,17 @@
+<div class="conciliacion-wrapper">
+  <button class="volver-btn" (click)="volver()">Volver</button>
+  <button class="actualizar-btn" (click)="actualizarArchivo()">Actualizar archivo</button>
+
+  <h2>Archivo de Conciliación</h2>
+
+  <p *ngIf="totalHoy > 0" style="font-weight: bold; font-size: 18px; margin-bottom: 20px;">
+    Se conciliaron {{ totalHoy }} transacciones el {{ todayDate() }}
+  </p>
+
+  <!-- Contenido del archivo -->
+  <pre *ngIf="contenido">{{ contenido }}</pre>
+
+  <!-- Mensajes de estado -->
+  <p *ngIf="!contenido && !error">Cargando archivo...</p>
+  <p *ngIf="error">{{ error }}</p>
+</div>

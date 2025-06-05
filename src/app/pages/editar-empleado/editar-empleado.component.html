@@ -1,0 +1,26 @@
+<div class="editar-wrapper">
+  <!-- Botón de volver en esquina -->
+  <button class="volver-btn" (click)="volver()">Volver</button>
+
+  <!-- Tarjeta de formulario -->
+  <div class="form-container">
+    <h2 style="text-align: center; margin-bottom: 20px;">Modificar Empleado</h2>
+
+    <form (ngSubmit)="guardarCambios()">
+      <label>Nombre:</label>
+      <input type="text" [(ngModel)]="empleado.nombre" name="nombre" required />
+
+      <label>Cedula:</label>
+      <input type="text" [(ngModel)]="empleado.cedula" name="cedula" required />
+
+      <label>Rol:</label>
+      <select [(ngModel)]="empleado.rol" name="rol" required>
+        <option value="Inventario">Inventario</option>
+        <option value="Empleado">Empleado</option>
+        <option value="Administrador">Administrador</option>
+      </select>
+
+      <button type="submit">Guardar Cambios</button>
+    </form>
+  </div>
+</div>

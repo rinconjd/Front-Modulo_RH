@@ -1,0 +1,85 @@
+/* Fondo con imagen desenfocada */
+.login-wrapper {
+  height: 100vh;
+  background: url('https://img.freepik.com/fotos-premium/fondo-degradado-borroso-abstracto-fondo-color-azul-violeta-morado-oscuro-plantilla-banner-telon-fondo-malla-colores-dulces_335640-481.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja principal */
+.login-card {
+  max-width: 360px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25); /* Más blanco para destacar */
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); /* Sombra más fuerte */
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil para realce */
+}
+
+/* Imagen Avatar */
+.avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+}
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Grupo de entrada */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.input-group i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Inputs */
+.input-group input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Botón de login */
+button {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Mensaje de error */
+.error {
+  color: #ffcccc;
+  margin-top: 12px;
+  font-size: 13px;
+}

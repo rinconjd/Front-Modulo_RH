@@ -1,0 +1,64 @@
+<!-- Botón de volver -->
+<button class="btn-volver" (click)="volver()">Volver</button>
+
+<div class="ver-pedidos-wrapper">
+  <!-- Panel lateral para filtrar -->
+  <div class="filtro-panel">
+    <h2>Buscar por fechas</h2>
+
+    <label for="inicio">Fecha de inicio</label>
+    <input id="inicio" type="date" [(ngModel)]="fechaInicio" name="fechaInicio" />
+
+    <label for="fin">Fecha de fin</label>
+    <input id="fin" type="date" [(ngModel)]="fechaFin" name="fechaFin" />
+
+    <button class="btn-buscar" (click)="buscarPedidos()">Buscar</button>
+
+    <h2>Buscar por ID</h2>
+    <input id="idPedido" type="text" [(ngModel)]="idBusqueda" name="idBusqueda" placeholder="Ingrese el ID del pedido" />
+    <button class="btn-buscar" (click)="buscarPorId()">Buscar por ID</button>
+  </div>
+
+  <!-- Tabla de resultados -->
+  <div class="resultados-panel">
+    <h2>Pedidos filtrados</h2>
+
+    <div class="tabla">
+      <table *ngIf="pedidos.length > 0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Cédula</th>
+            <th>Dirección</th>
+            <th>Fecha de Creación</th>
+            <th>Fecha de Entrega</th>
+            <th>Estado</th>
+            <th>Productos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of pedidos; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ p.id }}</td>
+            <td>{{ p.cedula }}</td>
+            <td>{{ p.direccion }}</td>
+            <td>{{ p.fechaCreacion | date: 'short' }}</td>
+            <td>{{ p.fechaEntrega | date: 'short' }}</td>
+            <td>{{ p.estado }}</td>
+            <td>
+              <ul>
+                <li *ngFor="let prod of p.productos">
+                  {{ prod.nombre }} ({{ prod.categoria }})
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="error" class="mensaje-error">{{ error }}</p>
+      <p *ngIf="!error && pedidos.length === 0" class="mensaje-vacio">No hay pedidos para mostrar.</p>      
+    </div>
+
+  </div>
+</div>

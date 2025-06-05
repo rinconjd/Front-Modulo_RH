@@ -1,0 +1,128 @@
+.ver-pedidos-wrapper {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 80px 20px 20px 20px;
+  background: url('https://img.freepik.com/fotos-premium/fondo-degradado-borroso-abstracto-fondo-color-azul-violeta-morado-oscuro-plantilla-banner-telon-fondo-malla-colores-dulces_335640-481.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.btn-volver {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #7e57c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.btn-volver:hover {
+  background-color: #9575cd;
+}
+
+.filtro-panel {
+  flex: 1;
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.filtro-panel h2 {
+  margin-bottom: 15px;
+}
+
+.filtro-panel label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.filtro-panel input {
+  width: 60%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-buscar {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #5c6bc0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-buscar:hover {
+  background-color: #7986cb;
+}
+
+/* Tabla de resultados */
+.resultados-panel {
+  flex: 3;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow-x: auto; /* permite scroll si se desborda */
+  display: inline-block; /* para que el ancho se ajuste al contenido */
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  color: white;
+  width: auto; /* que se ajuste al contenido */
+  min-width: 100%;
+  table-layout: auto; /* permitir ajuste dinámico */
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+  white-space: nowrap; /* evita que se partan en varias líneas */
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.mensaje-vacio {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.mensaje-error {
+  color: #a01f1f;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.mensaje-vacio {
+  font-style: italic;
+  margin-top: 10px;
+}
