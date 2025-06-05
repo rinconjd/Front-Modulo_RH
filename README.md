@@ -1,59 +1,150 @@
-# FrontEmpleados
+# 👨‍💻 Autores
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+| Nombre                | Foto                                                                                                     |
+| --------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Juan David Rincón** | <img src="https://github.com/user-attachments/assets/b54a095e-bd7c-4e3f-b383-b6e8e0977e52" width="150"/> |
+| **Julián Rodriguez**  | <img src="https://github.com/user-attachments/assets/afdfeff6-8865-433a-8ed8-89503c0c6e2d" width="150"/> |
 
-## Development server
+# 🧩 Front - Módulo RH (Retail App)
 
-To start a local development server, run:
+Este módulo representa la interfaz frontend del sistema de Recursos Humanos del ecosistema Retail, desarrollado en Angular. Permite a los usuarios autenticados realizar operaciones como la gestión de empleados, transacciones, conciliaciones de pagos, y pedidos por fecha o identificador.
+
+## 💻 Tecnologías utilizadas
+
+* Angular 17 (standalone components)
+* TypeScript
+* RxJS y Observables
+* Angular Router
+* Angular HTTPClient
+* Bootstrap + CSS custom
+* JWT Auth para protección de rutas
+
+---
+
+## 🚀 Requisitos previos
+
+* Node.js 18+
+* Angular CLI
+* Un backend funcional disponible (como el del proyecto .NET Modulo\_RH)
+
+---
+
+## ⚙️ Configuración del proyecto
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/usuario/Front-Modulo_RH.git
+cd Front-Modulo_RH
+```
+
+### 2. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 3. Configurar endpoints
+
+Edita las URLs base dentro de los servicios como `auth.service.ts`, `empleado.service.ts`, `transaccion.service.ts`, etc., apuntando a la IP o dominio de tu backend:
+
+```ts
+private apiUrl = 'http://10.43.96.39:5000/api';
+```
+
+---
+
+## 🔐 Autenticación con JWT
+
+El sistema incluye inicio de sesión para roles `Admin`, `Ordenes` e `Inventario`, donde cada uno tiene accesos distintos.
+
+* El token se almacena en `localStorage`
+* Se envía en el header `Authorization` como `Bearer <token>`
+
+---
+
+## 🛠️ Ejecutar el proyecto en desarrollo
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abre en el navegador:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## 🧪 Funcionalidades
+
+* [x] Login y protección de rutas según rol
+* [x] CRUD de empleados (solo Admin)
+* [x] Visualización de clientes y transacciones (roles `Ordenes` y `Inventario`)
+* [x] Generación y lectura de archivo de conciliación (formato .txt)
+* [x] Filtro de pedidos por fecha o código
+* [x] Manejo de errores y mensajes por indisponibilidad del backend
+
+---
+
+## 📦 Estructura de carpetas
+
+```
+/src
+  /app
+    /pages
+      /login
+      /empleados
+      /visualizacion-empleado
+      /conciliacion
+      /ver-pedidos
+    /services
+    /guards
 ```
 
-## Building
+---
 
-To build the project run:
+## 📄 Roles y permisos
 
-```bash
-ng build
-```
+| Rol        | Acciones habilitadas               |
+| ---------- | ---------------------------------- |
+| Admin      | Crear, editar y eliminar empleados |
+| Ordenes    | Ver pedidos y transacciones        |
+| Inventario | Ver conciliaciones y clientes      |
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🎯 Mensajes de error personalizados
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+* Si no hay registros: `No hay datos disponibles.`
+* Si el backend está caído: `Servicio no disponible`
+* Al buscar por ID no existente: `No se encontró ningún pedido con ese ID`
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🧠 Buenas prácticas aplicadas
 
-For end-to-end (e2e) testing, run:
+* Componentes standalone para modularidad
+* Guards por rol (`AuthGuard`, `EmpleadoRoleGuard`)
+* Interceptor de JWT para token global
+* Manejo de errores con mensajes claros al usuario
+* CSS limpio, responsive y con gradientes personalizados
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🌐 Enlace al backend relacionado
 
-## Additional Resources
+> Puedes emparejar este frontend con el backend [Modulo\_RH](https://github.com/usuario/proyecto-rh) hecho en .NET 7.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## ✨ Contribuciones
+
+Pull requests y sugerencias son bienvenidas. Puedes abrir issues para cualquier funcionalidad deseada o reporte de bug.
+
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia MIT - consulta el archivo `LICENSE` para más detalles.
