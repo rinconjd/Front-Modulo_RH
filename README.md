@@ -81,9 +81,9 @@ http://localhost:4200
 
 * [x] Login y protección de rutas según rol
 * [x] CRUD de empleados (solo Admin)
-* [x] Visualización de clientes y transacciones (roles `Ordenes` y `Inventario`)
+* [x] Visualización de clientes y transacciones (roles `Empleado` e `Inventario`)
 * [x] Generación y lectura de archivo de conciliación (formato .txt)
-* [x] Filtro de pedidos por fecha o código
+* [x] Filtro de pedidos por fecha o identificador
 * [x] Manejo de errores y mensajes por indisponibilidad del backend
 
 ---
@@ -107,11 +107,11 @@ http://localhost:4200
 
 ## 📄 Roles y permisos
 
-| Rol        | Acciones habilitadas               |
-| ---------- | ---------------------------------- |
-| Admin      | Crear, editar y eliminar empleados |
-| Ordenes    | Ver pedidos y transacciones        |
-| Inventario | Ver conciliaciones y clientes      |
+| Rol        | Acciones habilitadas                                         |
+| ---------- | ------------------------------------------------------------ |
+| Admin      | Crear, editar y eliminar empleados                           |
+| Ordenes    | Ver pedidos, transacciones, conciliaciones y clientes        |
+| Empleado   | Ver pedidos, transacciones, conciliaciones y clientes        |
 
 ---
 
@@ -142,9 +142,3 @@ http://localhost:4200
 ## ✨ Contribuciones
 
 Pull requests y sugerencias son bienvenidas. Puedes abrir issues para cualquier funcionalidad deseada o reporte de bug.
-
----
-
-## 📜 Licencia
-
-Este proyecto está bajo la Licencia MIT - consulta el archivo `LICENSE` para más detalles.
